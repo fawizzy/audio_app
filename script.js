@@ -3,9 +3,9 @@ const peer = new Peer(
     .toString(36)
     .padStart(4, 0)}`,
   {
-    host: location.hostname,
+    // host: location.hostname,
     debug: 1,
-    path: "/myapp",
+    // path: "/myapp",
   }
 );
 
