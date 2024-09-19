@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Stream</title>
+</head>
+<body>
+    <h1>Webcam Stream</h1>
+    <video id="webcam" autoplay playsinline></video>
+
+    <script>
+        // Get the video element
+        const videoElement = document.getElementById('webcam');
+
+        // Request access to the webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                // Set the video source to the stream
+                videoElement.srcObject = stream;
+            })
+            .catch((err) => {
+                console.error("Error accessing media devices.", err);
+            });
+    </script>
+</body>
+</html>
