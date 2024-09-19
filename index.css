@@ -1,76 +1,125 @@
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
-    color: darkslategrey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: antiquewhite;
+  color: darkslategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: antiquewhite;
+  height: 100vh;
 }
 
 h1 {
-    font-size: 6rem;
-    letter-spacing: 0.2rem;
-    margin-bottom: auto;
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: auto;
 }
 
 p {
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 button {
-    background-color: -internal-light-dark(white, black);
-    padding: 1rem 10rem;
-    border-radius: 3rem;
-    border: none;
-    cursor: pointer;
+  background-color: -internal-light-dark(white, black);
+  padding: 1rem 10rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
 }
 
 .call-btn {
-    background-color: darkslategrey;
-    color: antiquewhite;
-    font-size: 3rem;
-    margin-left: 7rem;
+  background-color: darkslategrey;
+  color: antiquewhite;
+  font-size: 3rem;
+  margin-left: 7rem;
 }
 
 .hangup-btn {
-    background-color: darkred;
-    color: white;
-    font-size: 1.5rem;
-    margin-left: 6rem;
-    margin-top: 4rem;
+  background-color: darkred;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 6rem;
+  margin-top: 4rem;
 }
 
 .modal {
-    padding: 5rem;
-    background-color: whitesmoke;
-    border-radius: 2rem;
-    width: 40rem;
-    height: 20rem;
+  padding: 5rem;
+  background-color: whitesmoke;
+  border-radius: 2rem;
+  width: 40rem;
+  height: 20rem;
 }
 
 .inner-modal {
-    text-align: center;
+  text-align: center;
 }
 
 .modal label {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .modal input {
-    margin: 1rem 7rem 3rem;
-    display: block;
-    padding: 1rem;
-    border-radius: 3rem;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.19);
-    border: none;
-    width:50%;
+  margin: 1rem 7rem 3rem;
+  display: block;
+  padding: 1rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.19);
+  border: none;
+  width: 50%;
 }
 
 .connect-btn {
-    background-color: #0c1d1d;
-    color: whitesmoke;
+  background-color: #0c1d1d;
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+  }
+
+  p {
     font-size: 1.5rem;
+  }
+
+  button {
+    padding: 1rem 5rem;
+  }
+
+  .call-btn {
+    font-size: 2.5rem;
+    margin-left: 3rem;
+  }
+
+  .hangup-btn {
+    font-size: 1.2rem;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .modal {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .modal input {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .connect-btn {
+    font-size: 1.2rem;
+  }
 }
